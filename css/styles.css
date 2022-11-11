@@ -124,7 +124,7 @@ section {
 
 .nav-list {
   flex-wrap: wrap;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   gap: 50px;
 }
 .contacts {
@@ -652,7 +652,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .modal {
-    visibility: visible;
+   visibility: visible;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -663,9 +663,8 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 15px;
-   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 .backdrop.is-hidden .modal
 {visibility: hidden;
   opacity: 1;
@@ -699,9 +698,8 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .submint {
  margin-top: 30px;
- margin-left: 124px;
-
-
+ margin-left: 115px;
+ align-items: center;
   background-color: var(--cursor);
   color: var(--main-background-color);
   border-radius: 4px;
@@ -711,10 +709,9 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 16px;
   line-height: calc(30/16);
   letter-spacing: 0.06em;
-  align-items: center;
-  text-align: center;
-   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)}
+
 .submint:hover,
 .submint:focus {
   background-color: 1px solid #188ce8;
@@ -739,7 +736,6 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.03em;
   
 }
- /* modal text */
 .modal-text {
 margin-bottom: 12px;
   font-weight: 700;
@@ -750,16 +746,15 @@ letter-spacing: 0.03em;
 color: var(--main-color-text);
 }
 .subscribe-form{
- display: flex;
+ display:flex;
  margin-left: 93px;
-  align-items: center;
+  align-items:flex-end;
   width: 570px;
   height: 86px;}
-  .subscribe {
-    display: block;
-  }
+
   .subscribe{ 
-    justify-content: center;
+    /* position: relative; */
+  justify-content: center;
   display: flex;
   flex-direction: column;}
 
@@ -775,8 +770,8 @@ border-radius: 4px;
  }
  .subscribe-form label
 {
-  color: var(--main-background-color);
-  font-weight: 700;
+color: var(--main-background-color);
+font-weight: 700;
 font-size: 14px;
 line-height: 16px;
 letter-spacing: 0.03em;
@@ -785,6 +780,7 @@ color: var(--main-background-color);
 margin-bottom: 20px;
 }
 .subscribe-btn{
+  margin-left: 12px;
   padding-right: 62px;
   padding-left: 28px;
   padding-top: 10px;
@@ -792,26 +788,38 @@ margin-bottom: 20px;
 font-weight: 700;
 font-size: 16px;
 line-height: calc(30/16);
-align-items: center;
-text-align: center;
 letter-spacing: 0.06em;
   color: var(--main-background-color);
 width: 200px;
 height: 50px;
 background-color: var(--cursor);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 border: 1px solid var(--cursor);
-border-color: 1px solid var(--cursor);
+cursor: pointer;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
-.form{
-  display: inline-block;
-  align-items: center;
-  padding: 40px;
-  width: 528px;
-  height: 581px;
+
+.subscribe-btn:hover,
+.subscribe-btn:focus
+{
+  box-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.15);
   
+  }
+.form-send {
+position: relative;
 }
+.icon-send{
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: var(--main-background-color);
+  
+
+}
+
+.form{
+  padding: 40px;
+ }
 .form-field {
   
   justify-content: center;
@@ -821,7 +829,13 @@ border-color: 1px solid var(--cursor);
   color: var(--color-text);
   
 }
-
+.form-field label {
+  font-weight: 400;
+font-size: 12px;
+line-height: calc(14/12);
+letter-spacing: 0.01em;
+color: #757575;
+}
 
 
 .form-field input {
@@ -831,6 +845,7 @@ border-color: 1px solid var(--cursor);
   border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 cursor: pointer;
+ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) , border 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .form-field textarea {
    resize:none;
@@ -845,10 +860,11 @@ line-height: calc(14/12);
 letter-spacing: 0.01em;
 color: var(--color-text); 
 cursor: pointer;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) , border 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .form-field label {
   margin-bottom: 4px;
-}
+  }
 .form-field input:hover,
 .form-field input:focus{
   border-color:var(--cursor) ;
@@ -867,23 +883,38 @@ cursor: pointer;
   bottom: 11px;
   left: 12px;
   fill: var(--main-color-text);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) , fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 
 }
 .form-field:hover .form-icon{
   fill: var(--cursor);
 }
-.check-point{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.checkbox{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
 }
-.check-text{
-    font-weight: 400;
-font-size: 14px;
-line-height: calc(24/14);
-letter-spacing: 0.03em;
-color: var(--color-text);
+.checkbox-icon{
+  margin-right: 7px;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+   border: 2px solid var(--main-color-text);
+  border-radius:2px;
+    }
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--cursor);
+  background-color: var(--cursor);
+  background-image: url('../images/image.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.checkbox-lable {
+  margin-top: 8px;
+  padding-left: 12px;
+  color: var(--color-text);
 }
 .check-link{
 font-weight: 400;
@@ -892,8 +923,4 @@ line-height: calc(24/14);
 letter-spacing: 0.03em;
 color: var(--cursor);
 
-}
-.check-svg {
-  fill: var(--main-color-text);
-  margin-right: 8.38px;
 }

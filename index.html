@@ -594,8 +594,8 @@
             <label for="mail"> Підпишіться на розсилку </label>
             <input type="email" name="mail" id="mail" placeholder="E-mail" />
           </div>
-          <button type="button" class="subscribe-btn">Підписатися</button>
           <div class="form-send">
+            <button type="button" class="subscribe-btn">Підписатися</button>
             <svg class="icon-send" width="24" height="24">
               <use href="./images/icons.svg#icon-send"></use>
             </svg>
@@ -645,24 +645,30 @@
             <label for="feedback"> Коментар</label>
             <textarea
               name="feedback"
-              rows="6"
+              rows="7"
               id="feedback"
               placeholder="Введіть текст"
             ></textarea>
           </div>
           <div class="check-point">
-            <svg class="check-svg" width="16" height="15">
-              <use href="./images/icons.svg#Vector"></use>
-            </svg>
-            <p class="check-text">Погоджуюся з розсилкою та приймаю&ensp;</p>
-            <a
-              class="check-link"
-              href=""
-              target="_blank"
-              rel="nofollow noreferrer noopener"
-              aria-label="Умови договору"
-              >Умови договору</a
-            >
+            <label class="checkbox-lable">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="topic"
+                value="conditions"
+              />
+              <span class="checkbox-icon"></span>
+              Погоджуюся з розсилкою та приймаю&ensp;
+              <a
+                class="check-link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+                aria-label="Умови договору"
+                >Умови договору
+              </a>
+            </label>
           </div>
           <button class="submint" data-modal-close>Відправити</button>
         </form>
