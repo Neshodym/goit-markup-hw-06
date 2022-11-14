@@ -100,9 +100,10 @@ section {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.nav-link:hover,
-.nav-link:focus
+.nav-link:focus-within{
+color: var(--cursor);
+}
+.nav-link:hover
 {
   color: var(--cursor);
 
@@ -213,7 +214,6 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-text {
-  /* outline: solid tomato; */
   margin-bottom: 30px;
   text-align: center;
   color: var(--main-background-color);
@@ -739,6 +739,12 @@ background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezi
   letter-spacing: 0.03em;
   
 }
+.form-field-input:hover,
+.form-field-input:focus{
+  border-color: var(--cursor);
+  outline: var(--cursor);
+  fill: var(--cursor);
+}
 .modal-text {
 margin-bottom: 12px;
   font-weight: 700;
@@ -765,7 +771,7 @@ color: var(--main-color-text);
   flex-direction: column;}
 
  .subscribe-form input{
-width: 358px;
+ width: 358px;
 height: 50px;
 padding: 15px 16px;
 color: rgba(255, 255, 255, 0.6);
@@ -845,6 +851,7 @@ color: #757575;
 
 
 .form-field input {
+  color: var(--color-text);
   padding-left: 42px;
   padding-top:  11px;
   padding-bottom: 11px;
@@ -855,6 +862,8 @@ cursor: pointer;
 }
 
 .form-field textarea {
+  outline: var(--cursor);
+  height: 120px;
    resize:none;
    padding: 11px 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -872,11 +881,18 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) , border 250ms cubic-be
 .form-field label {
   margin-bottom: 4px;
   }
-.form-field input:hover,.form-field input:focus
+.form-field input:hover 
 {
   border-color:var(--cursor) ;
-  color: var(--cursor);
-  fill: var(--cursor);}
+    fill: var(--cursor);
+}
+ 
+.form-field input:focus
+{
+ border-color:var(--cursor) ;
+    fill: var(--cursor);
+}
+
 
 
 /* .form-field input:focus-within{
@@ -905,8 +921,9 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) , border 250ms cubic-be
 .form-field:hover .form-icon{
   fill: var(--cursor);
 }
-.form-field:focus .form-icon{
+.form-field:focus-within .form-icon{
   fill: var(--cursor);
+  border-color: var(--cursor);
 }
 .input-form{
   height: 40px;
@@ -949,7 +966,10 @@ opacity: 1;
   color: var(--color-text);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.checkbox-lable::placeholder {
+  border-color: var(--cursor);
+  fill: var(--cursor);
+}
 
 .check-link{
 
